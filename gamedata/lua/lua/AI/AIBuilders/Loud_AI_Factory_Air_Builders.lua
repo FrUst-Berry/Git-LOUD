@@ -166,6 +166,10 @@ BuilderGroup {BuilderGroupName = 'Factory Production Air - Scouts', BuildersRest
                 return 10, true
             end
             
+            if LOUDGETN( GetListOfUnits( aiBrain, AIRSCOUT, false, true )) < 2 then
+                return 610, true
+            end
+            
             return self.Priority, false
         end,
 
@@ -200,6 +204,10 @@ BuilderGroup {BuilderGroupName = 'Factory Production Air - Scouts', BuildersRest
 	
             if LOUDGETN( GetListOfUnits( aiBrain, FACTORY * AIRT3, false, true )) > 0 then
                 return 0, false
+            end
+            
+            if LOUDGETN( GetListOfUnits( aiBrain, AIRSCOUT, false, true )) < 2 then
+                return 610, true
             end
             
             return self.Priority, false
