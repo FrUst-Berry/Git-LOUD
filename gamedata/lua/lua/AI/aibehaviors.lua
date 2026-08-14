@@ -4177,9 +4177,15 @@ function AirForceAI_Bomber_LOUD( self, aiBrain )
                             IssueFormAttack( GetSquadUnits( self, 'Unassigned' ), { midpointx, midpointy, midpointz }, 'AttackFormation', Direction )
                             
                             WaitTicks(36)
+                            
+                            if PlatoonExists(aiBrain,self) then
 
-                            attackers     = GetSquadUnits( self,'Unassigned' ) or {}
-                            attackercount = LOUDGETN(attackers)
+                                attackers     = GetSquadUnits( self,'Unassigned' ) or {}
+                                attackercount = LOUDGETN(attackers)
+                                
+                            else
+                                break
+                            end
                             
                         end
 
