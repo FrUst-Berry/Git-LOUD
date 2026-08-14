@@ -189,16 +189,16 @@ BaseBuilderTemplate {
                 
             else
                 
-                -- if it's a 20k map and the unit cap is less than 1500
-                -- we'll make the large base as attractive as the small one 
-                if GetArmyUnitCap(aiBrain.ArmyIndex) < 1500 then
+                -- if it's a 20k map and the unit cap is less than 1200
+                -- we'll make the large base only as attractive as the small one 
+                if GetArmyUnitCap(aiBrain.ArmyIndex) < 1200 then
             
-                    return Random(10,60), 'loud'
+                    return Random(35,90), 'loud'
                     
                 else
                 
                     -- otherwise we prefer the large base
-                    return Random(50,100),'loud'
+                    return Random(75,100),'loud'
                     
                 end
                 
@@ -206,10 +206,10 @@ BaseBuilderTemplate {
 
 		end
         
-        -- any 40k+ map where the unit cap is less than 1500 or there is considerable water
+        -- any 40k+ map where the unit cap is less than 1200 or there is considerable water
         -- then go with the small base layout -- too much ground to cover for such a limited
         -- cap, or one that clearly is intended to be a water conflict
-        if GetArmyUnitCap(aiBrain.ArmyIndex) < 1500 and aiBrain:GetMapWaterRatio() > .30 then
+        if GetArmyUnitCap(aiBrain.ArmyIndex) < 1200 and aiBrain:GetMapWaterRatio() > .35 then
         
             return 10, 'loud'
             

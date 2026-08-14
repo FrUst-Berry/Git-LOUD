@@ -174,11 +174,11 @@ BaseBuilderTemplate {
 			
         -- If we're playing on a 20k map
         elseif (mapSizeX >= 1024 and mapSizeX <= 2047) and (mapSizeZ >= 1024 and mapSizeZ <= 2048) then
-            return Random(60, 100), 'loud'
+            return Random(25, 35), 'loud'
 		
 		end
 
 		-- if we're playing on anything larger
-        return 25, 'loud'
+        return 10, 'loud'
     end,
 }
