@@ -36,7 +36,8 @@ BuilderGroup {BuilderGroupName = 'Air Formations - Scouts', BuildersRestriction 
 		
 		PriorityFunction = function(self, aiBrain, manager)
         
-            if aiBrain.CycleTime < 420 then
+            -- this builder is limited by time AND mapsize
+            if aiBrain.CycleTime < 360 and ScenarioInfo.IMAPSize > 64 then
                 return 10, true
             end
 
@@ -73,7 +74,7 @@ BuilderGroup {BuilderGroupName = 'Air Formations - Scouts', BuildersRestriction 
 		
 		PriorityFunction = function(self, aiBrain, manager)
         
-            if aiBrain.CycleTime < 390 then
+            if aiBrain.CycleTime < 330 then
                 return 10, true
             end
             
@@ -105,7 +106,7 @@ BuilderGroup {BuilderGroupName = 'Air Formations - Scouts', BuildersRestriction 
 		
 		PriorityFunction = function(self, aiBrain, manager)
         
-            if aiBrain.CycleTime < 360 then
+            if aiBrain.CycleTime < 300 then
                 return 10, true
             end
             
@@ -139,7 +140,12 @@ BuilderGroup {BuilderGroupName = 'Air Formations - Scouts', BuildersRestriction 
 
 		PriorityFunction = function(self, aiBrain, manager)
         
-            if aiBrain.CycleTime < 330 then
+            -- remove this task on maps 20k or less
+            if ScenarioInfo.IMAPSize <= 64 then 
+                return 0, false
+            end
+        
+            if aiBrain.CycleTime < 240 then
                 return 10, true
             end
             
