@@ -646,7 +646,7 @@ BuilderGroup {BuilderGroupName = 'Factory Production Land - Land Only Map', Buil
 
 			{ LUTL, 'FactoriesGreaterThan', { 2, LANDT3 }},
 
-			{ UCBC, 'LocationFactoriesBuildingLess', { 'LocationType', 2, DIRECTFIRELAND * categories.TECH3, (LAND * categories.TECH3) + categories.GATE }},
+			{ UCBC, 'LocationFactoriesBuildingLess', { 'LocationType', 3, DIRECTFIRELAND * categories.TECH3, (LAND * categories.TECH3) + categories.GATE }},
         },
 		
         BuilderType =  {'LandT3','Gate'},	-- this allows Gates to make them as well
@@ -668,7 +668,7 @@ BuilderGroup {BuilderGroupName = 'Factory Production Land - Land Only Map', Buil
 
 			{ LUTL, 'FactoriesGreaterThan', { 2, LANDT3 }},
 
- 			{ UCBC, 'LocationFactoriesBuildingLess', { 'LocationType', 2, DIRECTFIRELAND - AMPHIBIOUS, LANDT3 }},				
+ 			{ UCBC, 'LocationFactoriesBuildingLess', { 'LocationType', 3, DIRECTFIRELAND - AMPHIBIOUS, LANDT3 }},				
         },
 		
         BuilderType =  {'LandT3','Gate'},	-- this allows Gates to make them as well
@@ -699,7 +699,7 @@ BuilderGroup {BuilderGroupName = 'Factory Production Land - Land Only Map', Buil
             -- must have some Directfire in the Pool at this Location
             { UCBC, 'PoolGreaterAtLocation', { 'LocationType', 2, DIRECTFIRELAND }},
 
- 			{ UCBC, 'LocationFactoriesBuildingLess', { 'LocationType', 2, categories.LAND * categories.MOBILE * categories.ARTILLERY * categories.TECH3, LANDT3 }},
+ 			{ UCBC, 'LocationFactoriesBuildingLess', { 'LocationType', 3, categories.LAND * categories.MOBILE * categories.ARTILLERY * categories.TECH3, LANDT3 }},
 
         },
 		
@@ -726,7 +726,7 @@ BuilderGroup {BuilderGroupName = 'Factory Production Land - Land Only Map', Buil
 
 			{ LUTL, 'PoolLess', { 30, categories.LAND * categories.MOBILE * categories.INDIRECTFIRE }},
 
-			{ UCBC, 'LocationFactoriesBuildingLess', { 'LocationType', 1, categories.xel0306, LANDT3 }},
+			{ UCBC, 'LocationFactoriesBuildingLess', { 'LocationType', 2, categories.xel0306, LANDT3 }},
 
 			{ UCBC, 'PoolLessAtLocation', { 'LocationType', 14, categories.xel0306 }},
         },
