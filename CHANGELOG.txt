@@ -1,3 +1,17 @@
+### Release 08-15-2026
+
+LUA 8.16
+Map 3Roads
+
+- remarked version of the map 3Roads
+- fixed a logic bug in the selection of base templates, this was restricting base defenses
+- increased # of builders for T3 land units
+- initial airscouts are now built at the same priority as transport when there are less than 2
+- on maps of 20k or less, the large range airscout patrol formation is removed
+- on maps of 20k or less, the initial short range airscout patrol is not time delayed
+
+
+
 ### Release 08-01-2026
 
 LUA 8.15
